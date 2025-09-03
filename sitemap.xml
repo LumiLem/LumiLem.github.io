@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.lumlime.cn/daily/essay/2025-09-03-hello-world.html</loc>
+    <loc>https://blog.lumlime.cn/tags/</loc>
     
     <lastmod>2025-09-03</lastmod>
     
@@ -11,7 +11,7 @@
   </url>
   
   <url>
-    <loc>https://blog.lumlime.cn/categories/index.html</loc>
+    <loc>https://blog.lumlime.cn/daily/essay/2025-09-03-hello-world</loc>
     
     <lastmod>2025-09-03</lastmod>
     
@@ -20,7 +20,7 @@
   </url>
   
   <url>
-    <loc>https://blog.lumlime.cn/tags/index.html</loc>
+    <loc>https://blog.lumlime.cn/categories/</loc>
     
     <lastmod>2025-09-03</lastmod>
     
