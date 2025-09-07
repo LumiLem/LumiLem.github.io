@@ -5778,6 +5778,20 @@ p>strong>span.tag-plugin.icon {
   opacity: 1;
   display: inline-block;
 }
+.tag-plugin.image.live-photo .image-bg .live-photo-container .icon .loading-spinner {
+  width: 22px;
+  height: 22px;
+  position: relative;
+  display: none;
+}
+.tag-plugin.image.live-photo .image-bg .live-photo-container .icon .loading-spinner svg {
+  width: 100%;
+  height: 100%;
+}
+.tag-plugin.image.live-photo .image-bg .live-photo-container .icon .loading-spinner svg circle:last-child {
+  animation: spin 1s linear infinite;
+  transform-origin: center;
+}
 .tag-plugin.image.live-photo .image-bg .live-photo-container .icon span {
   padding: 3px;
   color: #606060;
