@@ -2,27 +2,27 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>https://blog.lumlime.cn/tags/</loc>
+    <loc>https://www.lumlime.cn/tags/</loc>
     
-    <lastmod>2025-10-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>https://blog.lumlime.cn/daily/essay/2025-10-24-hello-world/</loc>
-    
-    <lastmod>2025-10-24</lastmod>
+    <lastmod>2025-10-30</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   
   <url>
-    <loc>https://blog.lumlime.cn/categories/</loc>
+    <loc>https://www.lumlime.cn/daily/essay/2025-10-30-hello-world/</loc>
     
-    <lastmod>2025-10-24</lastmod>
+    <lastmod>2025-10-30</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>https://www.lumlime.cn/categories/</loc>
+    
+    <lastmod>2025-10-30</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -30,8 +30,8 @@
   
 
   <url>
-    <loc>https://blog.lumlime.cn/</loc>
-    <lastmod>2025-10-24</lastmod>
+    <loc>https://www.lumlime.cn/</loc>
+    <lastmod>2025-10-30</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
@@ -40,15 +40,15 @@
 
   
   <url>
-    <loc>https://blog.lumlime.cn/categories/daily/</loc>
-    <lastmod>2025-10-24</lastmod>
+    <loc>https://www.lumlime.cn/categories/daily/</loc>
+    <lastmod>2025-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
   
   <url>
-    <loc>https://blog.lumlime.cn/categories/daily/essay/</loc>
-    <lastmod>2025-10-24</lastmod>
+    <loc>https://www.lumlime.cn/categories/daily/essay/</loc>
+    <lastmod>2025-10-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
   </url>
