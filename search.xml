@@ -1,6 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Ech0 动态时间线功能全方位测试</title>
+    <url>/uncategorized/2026-01-25-ech0-test/</url>
+    <content><![CDATA[<p>这是 Ech0 动态时间线功能的深度测试页面，涵盖了多种布局、显示控制和交互功能。</p>
+<h2 id="1-默认布局-Grid"><a href="#1-默认布局-Grid" class="headerlink" title="1. 默认布局 (Grid)"></a>1. 默认布局 (Grid)</h2><p>默认九宫格逻辑，自动处理图片、视频和实况照片。</p>
+<div class="tag-plugin timeline data-service ds-ech0"" limit="6" data-api="https://moments.lumlime.cn/api"></div>
+
+<h2 id="2-瀑布流布局-Waterfall"><a href="#2-瀑布流布局-Waterfall" class="headerlink" title="2. 瀑布流布局 (Waterfall)"></a>2. 瀑布流布局 (Waterfall)</h2><p>适合展示长图或比例不一的混合媒体。</p>
+<div class="tag-plugin timeline data-service ds-ech0"" layout="waterfall" limit="4" data-api="https://moments.lumlime.cn/api"></div>
+
+<h2 id="3-横向滚动-Horizontal"><a href="#3-横向滚动-Horizontal" class="headerlink" title="3. 横向滚动 (Horizontal)"></a>3. 横向滚动 (Horizontal)</h2><p>节省垂直空间，适合侧边栏或紧凑展示。</p>
+<div class="tag-plugin timeline data-service ds-ech0"" layout="horizontal" limit="6" data-api="https://moments.lumlime.cn/api"></div>
+
+<h2 id="4-轮播图模式-Carousel"><a href="#4-轮播图模式-Carousel" class="headerlink" title="4. 轮播图模式 (Carousel)"></a>4. 轮播图模式 (Carousel)</h2><p>全宽大图沉浸式展示。</p>
+<div class="tag-plugin timeline data-service ds-ech0"" layout="carousel" limit="3" data-api="https://moments.lumlime.cn/api"></div>
+
+<h2 id="5-显示控制测试-Hide-Limit"><a href="#5-显示控制测试-Hide-Limit" class="headerlink" title="5. 显示控制测试 (Hide &amp; Limit)"></a>5. 显示控制测试 (Hide &amp; Limit)</h2><h3 id="5-1-限制数量并关闭“加载更多”"><a href="#5-1-限制数量并关闭“加载更多”" class="headerlink" title="5.1 限制数量并关闭“加载更多”"></a>5.1 限制数量并关闭“加载更多”</h3><p>只看前 3 条，不显示加载按钮。</p>
+<div class="tag-plugin timeline data-service ds-ech0"" limit="3" loadmore="false" data-api="https://moments.lumlime.cn/api"></div>
+
+<h3 id="5-2-隐藏头像-Hide-Avatar"><a href="#5-2-隐藏头像-Hide-Avatar" class="headerlink" title="5.2 隐藏头像 (Hide Avatar)"></a>5.2 隐藏头像 (Hide Avatar)</h3><p>更紧凑的文字列表感。</p>
+<div class="tag-plugin timeline data-service ds-ech0"" hide="avatar" limit="2" data-api="https://moments.lumlime.cn/api"></div>
+
+<h3 id="5-3-隐藏底部交互-Hide-Footer"><a href="#5-3-隐藏底部交互-Hide-Footer" class="headerlink" title="5.3 隐藏底部交互 (Hide Footer)"></a>5.3 隐藏底部交互 (Hide Footer)</h3><p>纯净的内容展示模式，不显示跳转和点赞。</p>
+<div class="tag-plugin timeline data-service ds-ech0"" hide="footer" limit="2" data-api="https://moments.lumlime.cn/api"></div>
+
+<h3 id="5-4-极简模式-Hide-User"><a href="#5-4-极简模式-Hide-User" class="headerlink" title="5.4 极简模式 (Hide User)"></a>5.4 极简模式 (Hide User)</h3><p>完全隐藏用户信息栏，只保留内容和时间轴。</p>
+<div class="tag-plugin timeline data-service ds-ech0"" hide="user" limit="2" data-api="https://moments.lumlime.cn/api"></div>
+
+<h2 id="6-用户过滤测试"><a href="#6-用户过滤测试" class="headerlink" title="6. 用户过滤测试"></a>6. 用户过滤测试</h2><p>只显示用户“柠小芒”的动态。</p>
+<div class="tag-plugin timeline data-service ds-ech0"" user="柠小芒" limit="3" data-api="https://moments.lumlime.cn/api"></div>
+
+<hr>
+<blockquote>
+<p><strong>提示</strong>：鼠标悬停在带 <code>LIVE</code> 标识的图片上可预览实况效果；点击图片可进入 Fancybox 增强画廊模式。</p>
+</blockquote>
+]]></content>
+      <tags>
+        <tag>测试</tag>
+        <tag>Ech0</tag>
+        <tag>Live-Photo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>实况照片功能测试</title>
     <url>/%E6%B5%8B%E8%AF%95/2025-01-22-livephoto-test/</url>
     <content><![CDATA[<h1 id="Stellar主题实况照片功能测试"><a href="#Stellar主题实况照片功能测试" class="headerlink" title="Stellar主题实况照片功能测试"></a>Stellar主题实况照片功能测试</h1><p>本文用于测试Stellar主题新增的实况照片功能。</p>
@@ -133,9 +175,9 @@
         <category>测试</category>
       </categories>
       <tags>
+        <tag>测试</tag>
         <tag>Live Photo</tag>
         <tag>实况照片</tag>
-        <tag>测试</tag>
       </tags>
   </entry>
 </search>
