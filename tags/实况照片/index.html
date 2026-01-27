@@ -1052,6 +1052,7 @@ LIVE图标区域：PC端悬停播放视频
                 html: createLivePhotoHTML(imageUrl, videoUrl),
                 class: 'has-livephoto',
                 thumb: imageUrl,
+                caption: el.dataset.caption,
               };
             } else {
               const img = el.querySelector('img');
@@ -1066,6 +1067,7 @@ LIVE图标区域：PC端悬停播放视频
             item = {
               src: mediaSrc,
               thumb: el.dataset.thumb || mediaSrc,
+              caption: el.dataset.caption,
             };
             // 只有在明确指定了非默认类型时才设置 type，或者为视频文件指定 html5video
             if (el.dataset.type) {
@@ -1102,36 +1104,12 @@ LIVE图标区域：PC端悬停播放视频
             const startIndex = groupInfo.index;
 
             Fancybox.show(items, {
-              theme: 'auto',
-              zoomEffect: true,
-              fadeEffect: true,
               startIndex: startIndex,
-              backdropClick: 'close',
-              dragToClose: true,
-              closeButton: 'auto',
-              keyboard: {
-                Escape: 'close',
-                ArrowRight: 'next',
-                ArrowLeft: 'prev',
-                Delete: 'close',
-                Backspace: 'close',
-                ArrowDown: 'next',
-                ArrowUp: 'prev',
-                PageUp: 'close',
-                PageDown: 'close',
-              },
-              Carousel: {
-                Thumbs: {
-                  type: 'classic',
-                  showOnStart: true,
-                },
-              },
               on: {
                 ready: (fancybox) => {
                   const carousel = fancybox.getCarousel();
                   if (!carousel) return;
 
-                  // Use the startIndex from the groupInfo for the initial slide
                   const initialSlideIndex = startIndex;
 
                   carousel.getSlides().forEach((slide, index) => {

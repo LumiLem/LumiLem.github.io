@@ -4498,6 +4498,23 @@ a.tag-plugin.button:hover {
 .tag-plugin.timeline.ds-ech0 .timenode .body .content p:not(:last-child) {
   margin-bottom: 0.5rem;
 }
+.tag-plugin.timeline.ds-ech0 .timenode .body .content img,
+.tag-plugin.timeline.ds-ech0 .timenode .body .content .lazy-box {
+  display: inline-block;
+  vertical-align: text-bottom;
+  margin: 0 2px;
+  width: auto;
+  height: 1.4em;
+  background: transparent;
+  border-radius: 0;
+}
+.tag-plugin.timeline.ds-ech0 .timenode .body .content img img,
+.tag-plugin.timeline.ds-ech0 .timenode .body .content .lazy-box img {
+  display: inline-block;
+  margin: 0;
+  height: 100%;
+  width: auto;
+}
 .tag-plugin.timeline.ds-ech0 .timenode .body .gallery {
   padding: 0 0.75rem 0.5rem;
 }
