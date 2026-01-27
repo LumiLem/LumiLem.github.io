@@ -131,7 +131,8 @@
     root : `/`,
     tag_plugins: {
       chat: Object.assign({"api":"https://siteinfo.listentothewind.cn/api/v1"}),
-    }
+    },
+    twikoo: Object.assign({"js":"https://gcore.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.all.min.js","envId":"https://twikoo.lumlime.cn"}),
   };
 
   // required plugins (only load if needs)
@@ -611,9 +612,9 @@
 
   function load_twikoo() {
     if (!el) return;
-    utils.js('https://gcore.jsdelivr.net/npm/twikoo@1.6/dist/twikoo.all.min.js', {defer: true}).then(function () {
+    utils.js('https://gcore.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.all.min.js', {defer: true}).then(function () {
       const path = el.getAttribute('comment_id') ?? decodeURI(window.location.pathname);
-      twikoo.init(Object.assign({"js":"https://gcore.jsdelivr.net/npm/twikoo@1.6/dist/twikoo.all.min.js","envId":"https://twikoo.lumlime.cn"}, {
+      twikoo.init(Object.assign({"js":"https://gcore.jsdelivr.net/npm/twikoo@1.6.44/dist/twikoo.all.min.js","envId":"https://twikoo.lumlime.cn"}, {
         el: '#twikoo_container',
         path: path,
       }));

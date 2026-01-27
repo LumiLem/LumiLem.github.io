@@ -4541,56 +4541,58 @@ a.tag-plugin.button:hover {
   align-items: stretch;
 }
 .tag-plugin.timeline.ds-ech0 .timenode .body .footer .item {
-  border-width: 1px;
-  border-style: solid;
   margin: 2px;
-  border-radius: 4px;
-  padding: 0 0.5rem;
+  border-radius: 12px;
+  padding: 4px 10px;
   display: flex;
   align-items: center;
   font-size: 0.8125rem;
   font-weight: 500;
-  border-color: var(--block-border);
   background: var(--block);
   color: var(--text-p3);
-  transition: color border-color ease-out, background border-color ease-out;
-  -moz-transition: color border-color ease-out, background border-color ease-out;
-  -webkit-transition: color border-color ease-out, background border-color ease-out;
-  -o-transition: color border-color ease-out, background border-color ease-out;
+  border: none;
+  transition: all 0.2s ease-out;
 }
 .widget-wrapper .tag-plugin.timeline.ds-ech0 .timenode .body .footer .item {
-  padding: 0 0.25rem;
+  padding: 2px 6px;
   margin: 1px;
   font-size: 0.75rem;
 }
 .tag-plugin.timeline.ds-ech0 .timenode .body .footer .item svg {
-  width: 1.25em;
-  height: 1.25em;
-  margin-right: 2px;
+  width: 1.1em;
+  height: 1.1em;
   flex-shrink: 0;
+  stroke-width: 2.25px;
 }
 .tag-plugin.timeline.ds-ech0 .timenode .body .footer .item .count {
   margin-left: 2px;
-  line-height: 0;
+  line-height: 1;
+  opacity: 0.9;
 }
-.tag-plugin.timeline.ds-ech0 .timenode .body .footer .item.like {
-  cursor: pointer;
+.tag-plugin.timeline.ds-ech0 .timenode .body .footer .item.share {
+  padding: 4px 8px;
 }
-.tag-plugin.timeline.ds-ech0 .timenode .body .footer .item.like:hover {
-  background: var(--block-hover);
+.tag-plugin.timeline.ds-ech0 .timenode .body .footer .item.share svg {
+  margin-right: 0;
 }
-.tag-plugin.timeline.ds-ech0 .timenode .body .footer .item.like.active {
-  color: var(--accent);
-  border-color: var(--accent);
-  background: rgba(128,128,128,0.05);
-}
-.tag-plugin.timeline.ds-ech0 .timenode .body .footer .item.origin,
+.tag-plugin.timeline.ds-ech0 .timenode .body .footer .item.like,
+.tag-plugin.timeline.ds-ech0 .timenode .body .footer .item.comments,
 .tag-plugin.timeline.ds-ech0 .timenode .body .footer .item.share {
   cursor: pointer;
 }
-.tag-plugin.timeline.ds-ech0 .timenode .body .footer .item.origin:hover,
+.tag-plugin.timeline.ds-ech0 .timenode .body .footer .item.like:hover,
+.tag-plugin.timeline.ds-ech0 .timenode .body .footer .item.comments:hover,
 .tag-plugin.timeline.ds-ech0 .timenode .body .footer .item.share:hover {
-  background: var(--block-border);
+  background: var(--block-hover);
+  color: var(--text-p1);
+  transform: translateY(-1px);
+}
+.tag-plugin.timeline.ds-ech0 .timenode .body .footer .item.like.active {
+  color: var(--accent);
+  background: var(--theme-a10);
+}
+.tag-plugin.timeline.ds-ech0 .timenode .body .footer .item.like.active svg {
+  fill: var(--accent);
 }
 .tag-plugin.timeline.ds-ech0 .timenode .body .footer .item.label {
   background: transparent;
