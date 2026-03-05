@@ -100,7 +100,7 @@ LIVE图标区域：PC端悬停播放视频
 </div></footer>
 <div class="main-mask" onclick="sidebar.dismiss()"></div></div><aside class="l_right">
 <div class="widgets">
-<widget class="widget-wrapper timeline"><div class="widget-header dis-select"><span class="name">我的动态</span></div><div class="widget-body fs14"><div class="tag-plugin timeline data-service ds-ech0" data-api="https://moments.lumlime.cn/api" limit="5" hide="user"></div></div></widget>
+<widget class="widget-wrapper timeline"><div class="widget-header dis-select"><span class="name">我的动态</span></div><div class="widget-body fs14"><div class="tag-plugin timeline data-service ds-ech0" data-api="https://moments.lumlime.cn/api" image-process="true" limit="5" hide="user"></div></div></widget>
 </div></aside><div class='float-panel'>
   <button type='button' style='display:none' class='laptop-only rightbar-toggle mobile' onclick='sidebar.rightbar()'>
     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6h11m-11 6h11m-11 6h11M4 6h1v4m-1 0h2m0 8H4c0-1 2-2 2-3s-1-1.5-2-1"/></svg>
@@ -1073,10 +1073,10 @@ LIVE图标区域：PC端悬停播放视频
               };
             }
           } else {
-            const mediaSrc = el.src || el.dataset.src || el.href;
+            const mediaSrc = el.dataset.original || el.dataset.src || el.src || el.href;
             item = {
               src: mediaSrc,
-              thumb: el.dataset.thumb || mediaSrc,
+              thumb: el.src || el.dataset.src || el.dataset.thumb || mediaSrc,
               caption: el.dataset.caption,
             };
             // 只有在明确指定了非默认类型时才设置 type，或者为视频文件指定 html5video
@@ -1244,6 +1244,41 @@ LIVE图标区域：PC端悬停播放视频
   });
 </script>
 <script>
+    (function () {
+        const load = () => {
+            if (window.meting_loader) return;
+
+            const selector = 'meting-js, .tag-plugin.audio, .ds-ech0';
+            if (document.querySelectorAll(selector).length === 0) return;
+
+            window.meting_loader = true;
+            let api = 'https://met.liiiu.cn/meting/api';
+            if (api) {
+                if (api.indexOf('?') === -1) {
+                    api += '?server=:server&type=:type&id=:id&auth=:auth&r=:r';
+                }
+                window.meting_api = api;
+            }
+
+            utils.css('https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css');
+            utils.js('https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js', { defer: true }).then(() => {
+                utils.js('https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js', { defer: true });
+            });
+        };
+
+        load();
+
+        const observer = new MutationObserver(() => {
+            load();
+            if (window.meting_loader) {
+                observer.disconnect();
+            }
+        });
+        observer.observe(document.body, { childList: true, subtree: true });
+
+        setTimeout(() => observer.disconnect(), 5000);
+    })();
+</script><script>
   document.addEventListener('DOMContentLoaded', function () {
     window.codeElements = document.querySelectorAll('.code');
     if (window.codeElements.length > 0) {

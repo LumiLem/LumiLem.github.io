@@ -4867,8 +4867,106 @@ a.tag-plugin.button:hover {
   min-width: 60px;
   text-align: center;
 }
-.tag-plugin.timeline.ds-ech0 .tag-plugin.audio-player {
-  padding: 0.5rem 1rem;
+.tag-plugin.timeline.ds-ech0 .tag-plugin.audio-player,
+.tag-plugin.timeline.ds-ech0 .tag-plugin.audio {
+  margin: 0.5rem 1rem;
+}
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio-player,
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio {
+  margin: 0.5rem 0;
+  width: 100%;
+}
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio-player .aplayer,
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio .aplayer {
+  margin: 0;
+  height: 60px;
+}
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio-player .aplayer.aplayer-withlrc .aplayer-pic,
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio .aplayer.aplayer-withlrc .aplayer-pic,
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio-player .aplayer.aplayer-withlist .aplayer-pic,
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio .aplayer.aplayer-withlist .aplayer-pic {
+  width: 60px;
+  height: 60px;
+}
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio-player .aplayer.aplayer-withlrc .aplayer-info,
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio .aplayer.aplayer-withlrc .aplayer-info,
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio-player .aplayer.aplayer-withlist .aplayer-info,
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio .aplayer.aplayer-withlist .aplayer-info {
+  margin-left: 60px;
+  height: 60px;
+  padding: 8px 10px 0;
+}
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio-player .aplayer .aplayer-pic,
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio .aplayer .aplayer-pic {
+  width: 60px;
+  height: 60px;
+}
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio-player .aplayer .aplayer-pic .aplayer-button,
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio .aplayer .aplayer-pic .aplayer-button {
+  width: 26px;
+  height: 26px;
+  margin: -13px;
+  border-width: 2px;
+  bottom: 50% !important;
+  right: 50% !important;
+}
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio-player .aplayer .aplayer-pic .aplayer-button svg,
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio .aplayer .aplayer-pic .aplayer-button svg {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 5px;
+  left: 6px;
+}
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio-player .aplayer .aplayer-pic .aplayer-pause svg,
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio .aplayer .aplayer-pic .aplayer-pause svg {
+  left: 5px;
+}
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio-player .aplayer .aplayer-info,
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio .aplayer .aplayer-info {
+  margin-left: 60px;
+  padding: 8px 10px 0;
+  height: 60px;
+  box-sizing: border-box;
+}
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio-player .aplayer .aplayer-info .aplayer-music,
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio .aplayer .aplayer-info .aplayer-music {
+  margin: 0 0 4px 0;
+  height: 18px;
+  display: flex;
+  align-items: center;
+}
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio-player .aplayer .aplayer-info .aplayer-music .aplayer-title,
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio .aplayer .aplayer-info .aplayer-music .aplayer-title {
+  font-size: 13px;
+}
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio-player .aplayer .aplayer-info .aplayer-music .aplayer-author,
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio .aplayer .aplayer-info .aplayer-music .aplayer-author {
+  font-size: 11px;
+}
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio-player .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap,
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio .aplayer .aplayer-info .aplayer-controller .aplayer-bar-wrap {
+  margin: 0;
+  padding: 4px 0;
+}
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio-player .aplayer .aplayer-info .aplayer-controller .aplayer-time,
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio .aplayer .aplayer-info .aplayer-controller .aplayer-time {
+  padding-left: 5px;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+}
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio-player .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon,
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon {
+  display: none;
+}
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio-player .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-time-inner,
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-time-inner {
+  margin: 0;
+}
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio-player .aplayer .aplayer-lrc,
+.widget-wrapper .tag-plugin.timeline.ds-ech0 .tag-plugin.audio .aplayer .aplayer-lrc {
+  display: none !important;
 }
 .tag-plugin.timeline.ds-ech0 .tag-plugin.video-player {
   margin: 0.5rem 0.75rem;
