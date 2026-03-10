@@ -55,7 +55,7 @@
 <body><div id="l_cover"></div><div class="l_body index" id="start" layout="categories" type="undefined" ><aside class="l_left"><div class="sidebg"></div><div class="leftbar-container">
 
 
-<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/logo.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">星柠日志</div><div class="sub cap">点点星光，汇聚万丈光芒</div></a></div></header>
+<header class="header"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/logo.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';" data-img-process data-original="/images/logo.png"></a><a class="title" href="/"><div class="main">星柠日志</div><div class="sub cap">点点星光，汇聚万丈光芒</div></a></div></header>
 
 <div class="nav-area">
 
@@ -69,7 +69,7 @@
 <footer class="footer dis-select"><div class="social-wrap"><a class="social" onclick="switchTheme()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024"><path fill="currentColor" fill-rule="evenodd" d="M582.4 326.4c-140.8 0-256 115.2-256 256s115.2 256 256 256 256-115.2 256-256-115.2-256-256-256z m0 448c-70.4 0-131.2-36.8-164.8-92.8 12.8 3.2 27.2 4.8 40 4.8 121.6 0 219.2-99.2 219.2-219.2 0-17.6-1.6-35.2-6.4-52.8 60.8 32 102.4 96 102.4 169.6 1.6 104-84.8 190.4-190.4 190.4zM582.4 262.4c17.6 0 32-14.4 32-32v-128c0-17.6-14.4-32-32-32s-32 14.4-32 32v128c0 17.6 14.4 32 32 32zM262.4 582.4c0-17.6-14.4-32-32-32h-128c-17.6 0-32 14.4-32 32s14.4 32 32 32h128c17.6 0 32-14.4 32-32zM310.4 356.8c6.4 6.4 14.4 9.6 22.4 9.6 8 0 16-3.2 22.4-9.6 12.8-12.8 12.8-32 0-44.8l-91.2-91.2c-12.8-12.8-32-12.8-44.8 0-12.8 12.8-12.8 32 0 44.8l91.2 91.2zM944 220.8c-12.8-12.8-32-12.8-44.8 0l-91.2 91.2c-12.8 12.8-12.8 32 0 44.8 6.4 6.4 14.4 9.6 22.4 9.6 8 0 16-3.2 22.4-9.6l91.2-91.2c12.8-12.8 12.8-33.6 0-44.8zM310.4 808l-91.2 91.2c-12.8 12.8-12.8 32 0 44.8 6.4 6.4 14.4 9.6 22.4 9.6 8 0 16-3.2 22.4-9.6l91.2-91.2c12.8-12.8 12.8-32 0-44.8-11.2-11.2-32-11.2-44.8 0z"></path></svg></a></div></footer>
 </div></aside><div class="l_main" id="main">
 
-<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/logo.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';"></a><a class="title" href="/"><div class="main">星柠日志</div><div class="sub cap">点点星光，汇聚万丈光芒</div></a></div></header>
+<header class="header mobile-only"><div class="logo-wrap"><a class="avatar" href="/about/"><div class="bg" style="opacity:0;background-image:url(https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/avatar/round/rainbow64@3x.webp);"></div><img no-lazy class="avatar" src="/images/logo.png" onerror="javascript:this.classList.add('error');this.src='https://gcore.jsdelivr.net/gh/cdn-x/placeholder@1.0.12/image/2659360.svg';" data-img-process data-original="/images/logo.png"></a><a class="title" href="/"><div class="main">星柠日志</div><div class="sub cap">点点星光，汇聚万丈光芒</div></a></div></header>
 
 
   
@@ -602,6 +602,66 @@
   })()
 </script>
 
+
+<script>
+  // Image Process: 根据当前访问域名，为相对路径图片动态拼接 CDN 处理参数
+  (function() {
+    var rules = [{"domains":["www.lumlime.cn"],"thumb_param":"?eo-img.resize=w/800&eo-img.format=webp","full_param":"?eo-img.format=webp"},{"domains":["cdn.lumlime.cn"],"thumb_param":"?imageMogr2/thumbnail/800x>/quality/75/ignore-error/1/interlace/1/format/webp","full_param":"?imageMogr2/format/webp"}];
+    var host = location.hostname;
+    var matched = null;
+    for (var i = 0; i < rules.length; i++) {
+      if (rules[i].domains && rules[i].domains.indexOf(host) !== -1) {
+        matched = rules[i];
+        break;
+      }
+    }
+    if (!matched) return;
+
+    function addParam(url, param) {
+      if (!param || !param.trim()) return url;
+      if (url.indexOf(param.replace(/^[?&]/, '')) !== -1) return url;
+      if (/\.(mp4|webm|svg|gif|swf)($|\?)/i.test(url)) return url;
+      param = param.trim();
+      var sep = url.indexOf('?') !== -1 ? '&' : '?';
+      var p = (param.charAt(0) === '?' || param.charAt(0) === '&') ? param.slice(1) : param;
+      return url + sep + p;
+    }
+
+    // 立即同步执行，在 LazyLoad 初始化之前完成
+    var imgs = document.querySelectorAll('img[data-img-process]');
+    for (var i = 0; i < imgs.length; i++) {
+      var img = imgs[i];
+      var dataSrc = img.getAttribute('data-src');
+      if (dataSrc) {
+        img.setAttribute('data-src', addParam(dataSrc, matched.thumb_param));
+      }
+      var src = img.getAttribute('src');
+      if (src && src.indexOf('data:') !== 0 && src.indexOf('://') === -1 && src.indexOf('//') !== 0) {
+        img.setAttribute('src', addParam(src, matched.thumb_param));
+      }
+      var original = img.getAttribute('data-original');
+      if (original) {
+        img.setAttribute('data-original', addParam(original, matched.full_param));
+      } else if (dataSrc) {
+        img.setAttribute('data-original', addParam(dataSrc, matched.full_param));
+      }
+      img.removeAttribute('data-img-process');
+    }
+
+    // 处理实况照片容器
+    var divs = document.querySelectorAll('[data-livephoto-image]');
+    for (var j = 0; j < divs.length; j++) {
+      var div = divs[j];
+      var liveImg = div.getAttribute('data-livephoto-image');
+      if (liveImg && liveImg.indexOf('://') === -1 && liveImg.indexOf('//') !== 0) {
+        div.setAttribute('data-livephoto-image', addParam(liveImg, matched.full_param));
+        div.setAttribute('data-src', addParam(liveImg, matched.full_param));
+      }
+    }
+  })();
+</script>
+
+
 <script async src="https://gcore.jsdelivr.net/npm/vanilla-lazyload@19.1/dist/lazyload.min.js"></script>
 <script>
   // https://www.npmjs.com/package/vanilla-lazyload
@@ -995,7 +1055,7 @@
       // 创建实况照片 HTML 内容
       function createLivePhotoHTML(imageUrl, videoUrl) {
         const autoPlayEnabled = livePhotoAutoPlay;
-        return `<div class="fancybox-livephoto-container"><div class="livephoto-content"><video class="livephoto-video" src="${videoUrl}" preload="metadata" playsinline disablepictureinpicture></video><img class="livephoto-image" src="${imageUrl}" alt="实况照片" /><div class="livephoto-control-wrapper"><div class="livephoto-icon"><svg class="livephoto-icon-svg ${autoPlayEnabled ? '' : 'disabled'}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="3" fill="currentColor"/>${autoPlayEnabled ? '' : '<line x1="4" y1="4" x2="20" y2="20" stroke="currentColor" stroke-width="1.5"/>'}</svg><span class="livephoto-label">LIVE</span><svg class="livephoto-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="livephoto-dropdown"><div class="livephoto-dropdown-item" data-action="toggle-autoplay"><span class="dropdown-text">${autoPlayEnabled ? '关闭自动播放' : '开启自动播放'}</span><svg class="dropdown-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="3" fill="currentColor"/>${autoPlayEnabled ? '' : '<line x1="4" y1="4" x2="20" y2="20"/>'}</svg></div></div></div></div></div>`;
+        return `<div class="fancybox-livephoto-container"><div class="livephoto-content"><video class="livephoto-video" src="${videoUrl}" preload="metadata" playsinline disablepictureinpicture></video><img class="livephoto-image lazy" data-src="${imageUrl}" data-img-process src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="实况照片" / data-original="${imageUrl}"><div class="livephoto-control-wrapper"><div class="livephoto-icon"><svg class="livephoto-icon-svg ${autoPlayEnabled ? '' : 'disabled'}" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="6" stroke="currentColor" stroke-width="1.5" fill="none"/><circle cx="12" cy="12" r="3" fill="currentColor"/>${autoPlayEnabled ? '' : '<line x1="4" y1="4" x2="20" y2="20" stroke="currentColor" stroke-width="1.5"/>'}</svg><span class="livephoto-label">LIVE</span><svg class="livephoto-chevron" width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></div><div class="livephoto-dropdown"><div class="livephoto-dropdown-item" data-action="toggle-autoplay"><span class="dropdown-text">${autoPlayEnabled ? '关闭自动播放' : '开启自动播放'}</span><svg class="dropdown-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="3" fill="currentColor"/>${autoPlayEnabled ? '' : '<line x1="4" y1="4" x2="20" y2="20"/>'}</svg></div></div></div></div></div>`;
       }
 
       // 初始化实况照片交互
@@ -1262,10 +1322,11 @@
             const imageUrl = el.dataset.livephotoImage;
             const videoUrl = el.dataset.livephotoVideo;
             if (imageUrl && videoUrl) {
+              const img = el.querySelector('img');
               item = {
                 html: createLivePhotoHTML(imageUrl, videoUrl),
                 class: 'has-livephoto',
-                thumb: imageUrl,
+                thumb: img?.dataset?.src || img?.src || imageUrl,
                 caption: el.dataset.caption,
               };
             } else {
